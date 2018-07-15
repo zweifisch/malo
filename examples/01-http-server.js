@@ -3,33 +3,33 @@ const {System, start, stop, dependencies, Status} = require('../')
 
 class Server {
 
-	get [dependencies]() {
-		return ['cfg']
-	}
+    get [dependencies]() {
+        return ['cfg']
+    }
 
-	async [start]({cfg}) {
-		this.server = http.createServer((request, response) => {
-			response.end('aha')
-		})
+    async [start]({cfg}) {
+        this.server = http.createServer((request, response) => {
+            response.end('aha')
+        })
 
-		await new Promise((resolve, reject) => {
-			this.server.listen(cfg.port, err => err ? reject(err) : resolve())
-		})
-        
+        await new Promise((resolve, reject) => {
+            this.server.listen(cfg.port, err => err ? reject(err) : resolve())
+        })
+
         console.log(`server listening on ${cfg.port}`)
-	}
+    }
 
-	async [stop]()  {
-		await new Promise((resolve, reject) => {
-			this.server.close(()=> resolve())
-		})
-	}
+    async [stop]()  {
+        await new Promise((resolve, reject) => {
+            this.server.close(()=> resolve())
+        })
+    }
 
 }
 
 class Config {
     get port() {
-      return 9696
+        return 9696
     }
 }
 
