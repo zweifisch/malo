@@ -1,19 +1,19 @@
 {
-    "devDependencies": {
-        "jest": "^22.4.3",
-        "standard-version": "^4.4.0"
-    },
-    "scripts": {
-        "test": "jest",
-        "release": "standard-version"
-    },
-    "name": "malo",
-    "version": "0.1.0",
-    "description": "managed lifecycle of stateful objects",
-    "main": "index.js",
-    "author": "zf",
-    "license": "MIT",
-    "dependencies": {
-        "promised-util": "^0.2.0"
-    }
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "standard-version": "^4.4.0"
+  },
+  "scripts": {
+    "test": "jest",
+    "release": "standard-version"
+  },
+  "name": "malo",
+  "version": "0.1.1-alpha.0",
+  "description": "managed lifecycle of stateful objects",
+  "main": "index.js",
+  "author": "zf",
+  "license": "MIT",
+  "dependencies": {
+    "promised-util": "^0.2.0"
+  }
 }
